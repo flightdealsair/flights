@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<script async="" src="https://scripts.clarity.ms/0.8.64/clarity.js"></script>
+<script async="" src="https://www.clarity.ms/tag/w48clp6y7t"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js"
+    id="eppiocemhmnlbhjplcgkofciiegomcon"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script>
+<script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script>
+
+<head>
+    <script bis_use="true" type="text/javascript" charset="utf-8"
+        data-bis-config="{&quot;blacklistIframeSrc&quot;:[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//www.google.com/recaptcha/enterprise/anchor&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;,&quot;//www.ukrnafta.com/data/map/&quot;,&quot;//maps.google.com/maps&quot;,&quot;//www.openstreetmap.org/export/embed.html&quot;,&quot;//www.google.com/maps/d/u/3/embed&quot;,&quot;//itm.ebaydesc.com/itmdesc&quot;,&quot;//books.google.com/books&quot;,&quot;//embed.podcasts.apple.com&quot;,&quot;//www.paypal.com/smartchat&quot;,&quot;//www.centurylink.com/assets/includes/common/sfChatiFrame.html&quot;,&quot;//macmillan-prod-gen.ada.support/embed&quot;,&quot;//macmillan-prod-gen.ada.support/chat&quot;,&quot;//ctl-consumer.my.site.com/&quot;],&quot;whitelistDomainsForPostBody&quot;:[&quot;youtube.com&quot;]}"
+        data-dynamic-id="29e55a63-20da-42cd-a5c5-f1c97f135186"
+        src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Premium International Flights &amp; Travel Experience | Book Global Trips</title>
+    <meta name="description"
+        content="Explore premium international flights with world-class comfort, seamless booking, and extensive global destinations. Enjoy a smooth and reliable travel experience.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0b2f55;
+            --navyDeep: #071f4a;
+            --ink: #0a1f3d;
+            --bg: #ffffff;
+            --max: 1180px;
+            --muted: #334155;
+            --line: rgba(15, 23, 42, .12);
+            --blue: #1e40ff;
+            --btnBlue: #1e73ff;
+            --softBlue: #edf4fb;
+            --softBorder: #c8d6e6;
+            --stickyH: 72px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: #0b1220;
+            padding-bottom: var(--stickyH);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== Top call strip ===== */
+        .top-strip {
+            background: var(--navy);
+            color: #fff;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: .2px;
+            padding: 16px 10px;
+            font-size: 22px;
+            line-height: 1.1;
+        }
+
+        .hero-right__p:hover {
+            background: #73ddea;
+        }
+
+        /* =========================
+       HERO (DESKTOP DEFAULT)
+    ========================= */
+        .hero {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 560px;
+        }
+
+        .hero-mobile {
+            display: none;
+        }
+
+        .hero-left {
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .hero-left__plane {
+            width: 100%;
+            height: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 26px 20px 10px;
+        }
+
+        .hero-left__plane img {
+            width: min(760px, 88%);
+            height: auto;
+            object-fit: contain;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .hero-left__content {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 18px 34px;
+            gap: 18px;
+        }
+
+        .hero-left__title {
+            margin: 0;
+            text-align: center;
+            color: var(--ink);
+            font-weight: 900;
+            font-size: 44px;
+            letter-spacing: .2px;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: min(920px, 92%);
+            height: 56px;
+            background: var(--navyDeep);
+            color: #fff;
+            font-weight: 900;
+            font-size: 26px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        .hero-right {
+            background: var(--navyDeep);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 28px 24px;
+        }
+
+        .hero-right__stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+            transform: translateY(-8px);
+        }
+
+        .hero-right__h {
+            margin: 0;
+            font-weight: 900;
+            font-size: 40px;
+            letter-spacing: .2px;
+        }
+
+        .hero-right__p {
+            margin: 0;
+            font-weight: 900;
+            font-size: 34px;
+            letter-spacing: .2px;
+            background-color: #fff;
+            padding: 10px 20px;
+            color: var(--navy);
+            border-radius: 5px;
+        }
+        }
+
+        /* =========================
+       MOBILE HERO
+    ========================= */
+        .hero-mobile {
+            display: none;
+            background: linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
+            padding: 20px 14px 18px;
+        }
+
+        .hero-mobile__wrap {
+            width: 100%;
+            max-width: 430px;
+            margin: 0 auto;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 14px 32px rgba(7, 31, 74, .10);
+        }
+
+        .hero-mobile__topbar {
+            background: var(--navy);
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: .4px;
+            padding: 10px 12px;
+        }
+
+        .hero-mobile__main {
+            padding: 18px 16px 20px;
+        }
+
+        .hero-mobile__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .hero-mobile__logo img {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .hero-mobile__title {
+            margin: 0;
+            text-align: center;
+            color: var(--navyDeep);
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 1.1;
+            letter-spacing: .2px;
+        }
+
+        .hero-mobile__subtitle {
+            margin: 10px 0 0;
+            text-align: center;
+            color: #334155;
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .hero-mobile__plane {
+            margin: 18px auto 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-mobile__plane img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .hero-mobile__features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 10px 0 18px;
+        }
+
+        .hero-mobile__feature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 46px;
+            padding: 10px 12px;
+            border-radius: 999px;
+            background: linear-gradient(180deg, #082a4c 0%, #071c35 100%);
+            border: 1px solid var(--softBorder);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 800;
+            box-shadow: 0 2px 0 rgba(11, 47, 85, .05);
+            transition: .2s ease;
+        }
+
+        .hero-mobile__feature:hover,
+        .hero-mobile__feature:active {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navyDeep) 100%);
+            color: #fff;
+            border-color: var(--navyDeep);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 18px rgba(7, 31, 74, .16);
+        }
+
+        .hero-mobile__callbox {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navyDeep) 100%);
+            color: #fff;
+            border-radius: 18px;
+            padding: 18px 14px;
+            text-align: center;
+        }
+
+        .hero-mobile__calltext {
+            margin: 0 0 8px;
+            font-size: 13px;
+            font-weight: 700;
+            opacity: .95;
+            letter-spacing: .2px;
+        }
+
+        .hero-mobile__number {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.1;
+            font-weight: 900;
+            word-break: break-word;
+        }
+
+        .hero-mobile__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 54px;
+            margin-top: 14px;
+            background: #fff;
+            color: var(--navyDeep);
+            border-radius: 999px;
+            font-size: 18px;
+            font-weight: 900;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .10);
+        }
+
+        .hero-mobile__helpline {
+            margin-top: 12px;
+            text-align: center;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* ===== Cabin banner ===== */
+        .cabin-hero {
+            position: relative;
+            width: 100%;
+            height: 360px;
+            background:
+                linear-gradient(180deg, rgb(0 0 0 / 69%) 0%, rgb(0 0 0 / 65%) 100%),
+                url(photo-1728467135949-e16d2c46715e.avif);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cabin-hero__inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .cabin-hero__title {
+            margin: 0;
+            color: #fff;
+            font-weight: 900;
+            font-size: 76px;
+            letter-spacing: .2px;
+            line-height: 1.05;
+            text-shadow: 0 6px 18px rgba(0, 0, 0, .45);
+        }
+
+        .cabin-hero__sub {
+            margin: 16px 0 0;
+            color: #fff;
+            font-weight: 800;
+            font-size: 38px;
+            letter-spacing: .2px;
+            line-height: 1.2;
+            text-shadow: 0 6px 18px rgba(0, 0, 0, .45);
+        }
+
+        /* ===== About section ===== */
+        .about {
+            padding: 64px 18px 40px;
+        }
+
+        .about__wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .about__title {
+            margin: 0 0 18px;
+            text-align: center;
+            font-size: 45px;
+            font-weight: 900;
+            letter-spacing: .2px;
+            color: #000;
+        }
+
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 54px;
+            align-items: start;
+        }
+
+        .about__logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 34px;
+        }
+
+        .about__h {
+            margin: 0 0 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #000;
+            line-height: 30px;
+        }
+
+        .about__p {
+            margin: 0 0 8px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #0f172a;
+        }
+
+        /* ===== Ready card ===== */
+        .ready {
+            padding: 0 18px 70px;
+        }
+
+        .ready__wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ready__card {
+            width: min(920px, 92vw);
+            background: var(--navyDeep);
+            border-radius: 14px;
+            padding: 46px 18px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 18px 50px rgba(2, 6, 23, .20);
+        }
+
+        .ready__title {
+            margin: 0;
+            font-size: 46px;
+            font-weight: 900;
+        }
+
+        .ready__text {
+            margin: 18px auto 0;
+            max-width: 720px;
+            font-size: 22px;
+            line-height: 1.55;
+            font-weight: 800;
+        }
+
+        .ready__call {
+            margin: 26px 0 0;
+            font-size: 20px;
+            font-weight: 900;
+            background: red;
+            width: 255px;
+            padding: 9px 9px;
+            border-radius: 5px;
+        }
+
+        /* ===== Plan section ===== */
+        .plan {
+            padding: 52px 18px 78px;
+            background: #fbfbfb;
+        }
+
+        .plan__wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .plan__title {
+            margin: 0 0 36px;
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            color: #000;
+            letter-spacing: .2px;
+        }
+
+        .plan__title .accent {
+            color: var(--blue);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 14px 30px rgba(2, 6, 23, .10);
+        }
+
+        .card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card__body {
+            padding: 22px 22px 26px;
+            text-align: center;
+        }
+
+        .card__link {
+            display: block;
+            font-size: 25px;
+            font-weight: 900;
+            color: var(--blue);
+            margin: 0 0 14px;
+            text-decoration: none;
+        }
+
+        .card__desc {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #111827;
+        }
+
+        /* ===== Sticky bottom bar ===== */
+        .bottom-strip {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: var(--stickyH);
+            background: var(--navy);
+            color: #fff;
+            z-index: 9999;
+            box-shadow: 0 -14px 30px rgba(2, 6, 23, .25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 22px;
+            padding: 0 70px;
+        }
+
+        .bottom-strip__btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 52px;
+            height: 52px;
+            border: 0;
+            border-radius: 2px;
+            background: var(--btnBlue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(2, 6, 23, .25);
+        }
+
+        .bottom-strip__btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        /* =========================
+       MOBILE ONLY
+    ========================= */
+        @media (max-width: 980px) {
+            :root {
+                --stickyH: 68px;
+            }
+
+            body {
+                padding-bottom: var(--stickyH);
+            }
+
+            .hero {
+                display: none !important;
+            }
+
+            .hero-mobile {
+                display: block;
+            }
+
+            .cabin-hero,
+            .about,
+            .ready,
+            .plan {
+                display: none !important;
+            }
+
+            .top-strip {
+                font-size: 18px;
+                padding: 14px 10px;
+                display: none;
+            }
+
+            .bottom-strip {
+                font-size: 18px;
+                padding: 0 66px;
+            }
+
+            .bottom-strip__btn {
+                width: 48px;
+                height: 48px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-mobile {
+                /* padding:14px 10px 16px; */
+            }
+
+            .hero-mobile__main {
+                padding: 16px 14px 18px;
+            }
+
+            .hero-mobile__title {
+                font-size: 26px;
+            }
+
+            .hero-mobile__subtitle {
+                font-size: 14px;
+            }
+
+            .hero-mobile__features {
+                gap: 10px;
+            }
+
+            .hero-mobile__feature {
+                font-size: 13px;
+                min-height: 44px;
+                padding: 8px 10px;
+            }
+
+            .hero-mobile__number {
+                font-size: 24px;
+            }
+
+            .hero-mobile__btn {
+                min-height: 50px;
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "w48clp6y7t");
+    </script>
+    <script bis_use="true" type="text/javascript" charset="utf-8" nonce=""
+        data-dynamic-id="29e55a63-20da-42cd-a5c5-f1c97f135186"
+        src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/101.js"></script>
+
+</head>
+
+<body id="top"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuNDciLCJzY29yZSI6MjAwNDcwfV0="
+    __processed_f120a6d1-b8bf-46b2-9329-2ed63c09c754__="true" cz-shortcut-listen="true">
+
+    <!-- Top Strip -->
+    <a href="tel:+18443652168">
+        <div class="top-strip" bis_skin_checked="1">Call +1 (844) 365-2168</div>
+    </a>
+
+    <!-- DESKTOP: unchanged -->
+    <section class="hero" aria-label="Top hero desktop">
+        <div class="hero-left" bis_skin_checked="1">
+            <div class="hero-left__plane" bis_skin_checked="1">
+                <img src="imagess.png" alt="Airplane">
+            </div>
+
+            <div class="hero-left__content" bis_skin_checked="1">
+                <h2 class="hero-left__title">Reservation Changes and Cancellation</h2>
+                <a class="cta" href="tel:+18443652168">Call +1 (844) 365-2168</a>
+            </div>
+        </div>
+
+        <div class="hero-right" bis_skin_checked="1">
+            <div class="hero-right__stack" bis_skin_checked="1">
+                <h1 class="hero-right__h">Reservation Help Desk</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOBILE: updated buttons clickable and colored -->
+    <section class="hero-mobile" aria-label="Top hero mobile">
+        <div class="hero-mobile__wrap" bis_skin_checked="1">
+            <div class="hero-mobile__topbar" bis_skin_checked="1">AIRLINE RESERVATION SUPPORT</div>
+
+            <div class="hero-mobile__main" bis_skin_checked="1">
+                <div class="hero-mobile__logo" bis_skin_checked="1">
+                    <img src="logo-emirates-Airlines-download-free-PNG.png" alt="Emirates Logo">
+                </div>
+
+                <h1 class="hero-mobile__title">Reservation Help Desk</h1>
+
+                <p class="hero-mobile__subtitle">
+                    Quick help for booking, changes, cancellation and travel assistance
+                </p>
+
+                <div class="hero-mobile__plane" bis_skin_checked="1">
+                    <img src="./banner.png" alt="Airplane">
+                </div>
+
+                <div class="hero-mobile__features" bis_skin_checked="1">
+                    <a class="hero-mobile__feature" href="tel:+18443652168">New Booking</a>
+                    <a class="hero-mobile__feature" href="tel:+18443652168">Changes</a>
+                    <a class="hero-mobile__feature" href="tel:+18443652168">Cancellation</a>
+                    <a class="hero-mobile__feature" href="tel:+18443652168">Customer Service</a>
+                </div>
+
+                <div class="hero-mobile__callbox" bis_skin_checked="1">
+                    <p class="hero-mobile__calltext">24/7 support available</p>
+                    <p class="hero-mobile__number">+1 (844) 365-2168</p>
+                    <a class="hero-mobile__btn" href="tel:+18443652168">Call Now</a>
+                </div>
+
+                <div class="hero-mobile__helpline" bis_skin_checked="1">Fast assistance for your travel needs</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECOND SECTION -->
+    <section class="cabin-hero" aria-label="Banner">
+        <div class="cabin-hero__inner" bis_skin_checked="1">
+            <a href="tel:+18443652168">
+                <h2 class="cabin-hero__title">Book Flights</h2>
+                <p class="cabin-hero__sub">Reservation Changes and Cancellation</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- THIRD SECTION -->
+    <section class="about" aria-label="About">
+        <div class="about__wrap" bis_skin_checked="1">
+            <h2 class="about__title">About Us</h2>
+
+            <div class="about__grid" bis_skin_checked="1">
+                <div class="about__logos" bis_skin_checked="1">
+                    <img src="emirates-logo.png" alt="" style="width:100%;max-width:420px;">
+                </div>
+
+                <div class="about__text" bis_skin_checked="1">
+                    <h3 class="about__h">
+                        Customer Support Number<br>
+
+                    </h3>
+
+                    <a href="tel:+18443652168" style="background: var(--navy);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;">Call +1 (844) 365-2168</a>
+
+                    <p class="about__p" style="    margin-top: 20px;">
+                        At Emirates air, we make booking flights quick, easy, and stress-free — all over the phone.
+                        Whether you’re planning a spontaneous getaway, an important business trip, or a long-awaited
+                        family vacation, we specialize in affordable and reliable flight reservations tailored to your
+                        travel needs.
+                    </p>
+
+                    <p class="about__p">
+                        Skip the frustration of endless online searches. With Emirates, you’ll get instant access to
+                        the best flight deals, handpicked by our experienced travel experts.
+                    </p>
+
+                    <p class="about__p">
+                        Our dedicated team is here around the clock to offer expert advice, help with special requests,
+                        and ensure your travel plans go smoothly from start to finish.
+                    </p>
+
+                    <p class="about__p">
+                        With Emirates air deals, your next journey is just a phone call away — simple, secure, and
+                        handled with care.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOURTH SECTION -->
+    <section class="ready" aria-label="Ready to take off">
+        <div class="ready__wrap" bis_skin_checked="1">
+            <div class="ready__card" bis_skin_checked="1">
+                <h2 class="ready__title">Ready to Take Off?</h2>
+                <p class="ready__text">
+                    Book your flight in minutes with a simple call. Let our team handle your travel needs with ease and
+                    confidence.
+                </p>
+                <a href="tel:+18443652168" style="display: flex; justify-content: center;">
+                    <div class="ready__call" bis_skin_checked="1">Call +1 (844) 365-2168</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIFTH SECTION -->
+    <section class="plan" aria-label="Plan your next adventure">
+        <div class="plan__wrap" bis_skin_checked="1">
+            <h2 class="plan__title">Plan your next <span class="accent">Adventure</span></h2>
+
+            <div class="cards" bis_skin_checked="1">
+                <article class="card">
+                    <img src="./2.avif" alt="Travel credits">
+                    <div class="card__body" bis_skin_checked="1">
+                        <a class="card__link" href="#top">Shop with travel credits</a>
+                        <p class="card__desc">Book a new trip or upgrade your current one with travel credits.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="./1.avif" alt="Get ready for your trip">
+                    <div class="card__body" bis_skin_checked="1">
+                        <a class="card__link" href="#top">Get ready for your trip</a>
+                        <p class="card__desc">View travel and entry requirements for anywhere in the world.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="./3.avif" alt="Save with packages">
+                    <div class="card__body" bis_skin_checked="1">
+                        <a class="card__link" href="#top">Save with packages</a>
+                        <p class="card__desc">Bundle flights, hotels and car rentals to get the best deals.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky bottom bar -->
+    <a href="tel:+18443652168">
+    </a>
+    <div class="bottom-strip" role="contentinfo" aria-label="Sticky bottom bar" bis_skin_checked="1"><a
+            href="tel:+18443652168">
+            Book Flights
+
+        </a><a href="tel:+18443652168"> <button class="bottom-strip__btn" id="callBtn" aria-label="Call now"
+                title="Call now" type="button">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                        d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.49c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.19 2.2z"
+                        fill="currentColor"></path>
+                </svg>
+            </button></a>
+    </div>
+
+
+    <script>
+        document.getElementById('toTop').addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
